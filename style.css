@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+  
+  .container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-bottom: 20px;
+  }
+  
+  .course-container {
+    width: 800px;
+    padding: 20px;
+    display: none;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  input[type="text"], 
+  input[type="password"], 
+  select, 
+  button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  .toggle {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .subjects-list .subject {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #e8e8e8;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .subjects-list .subject:hover {
+    background-color: #d1e0ff;
+  }
+  
+  .subjects-list .subject.selected {
+    background-color: #b3d9ff;
+  }
+  
+  canvas {
+    margin-top: 20px;
+    width: 100% !important;
+    max-width: 400px;
+    height: 400px;
+  }
+  
+  #quizQuestions div {
+    margin-bottom: 15px;
+  }
+  
+  #quizQuestions input[type="radio"] {
+    margin-right: 10px;
+  }

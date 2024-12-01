@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Learning Quiz Application</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="C:\Users\haris\OneDrive\Desktop\website\style.css">
+</head>
+<body>
+  <!-- Login/Signup Containers -->
+  <div class="container" id="loginContainer">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="text" id="loginUsername" placeholder="Username" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <div class="toggle">
+      <p>Don't have an account? <a href="#" id="showSignup">Sign Up</a></p>
+    </div>
+  </div>
+
+  <div class="container" style="display: none;" id="signupContainer">
+    <h2>Sign Up</h2>
+    <form id="signupForm">
+      <input type="text" id="signupName" placeholder="Full Name" required>
+      <input type="text" id="signupUsername" placeholder="Username" required>
+      <input type="password" id="signupPassword" placeholder="Password" required>
+      <button type="submit">Sign Up</button>
+    </form>
+    <div class="toggle">
+      <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+    </div>
+  </div>
+
+  <!-- Course Selection Container -->
+  <div class="container course-container" id="courseSelectionContainer">
+    <h2>Select a Course</h2>
+    <select id="courseSelect">
+      <option value="">Choose a course</option>
+      <option value="dataScience">Data Science</option>
+      <option value="python">Python Programming</option>
+      <option value="AI and DS">AI and DS</option>
+      <option value="CS">Computer Science</option>
+      <option value="EC">Electronics</option>
+    </select>
+    <div id="subjects-container" style="display:none;">
+      <label for="subjects">Select Subjects:</label>
+      <div id="subjects-list" class="subjects-list"></div>
+      <button onclick="startLearning()">Start Learning</button>
+    </div>
+  </div>
+
+  <!-- Quiz Container -->
+  <div class="container course-container" id="quizContainer" style="display:none;">
+    <h2>Quiz</h2>
+    <div id="quizQuestions"></div>
+    <button onclick="submitQuiz()">Submit Quiz</button>
+  </div>
+
+  <!-- Quiz Results Container -->
+  <div class="container course-container" id="quizResultsContainer" style="display:none;">
+    <h2>Quiz Results</h2>
+    <p id="quizScore"></p>
+    <canvas id="scoreChart"></canvas>
+    <button onclick="showQuizDashboard()">View Dashboard</button>
+  </div>
+
+  <!-- Quiz Dashboard Container -->
+  <div class="container course-container" id="quizDashboardContainer" style="display:none;">
+    <h2>Quiz Dashboard</h2>
+    <p id="totalQuizzes"></p>
+    <p id="userLevel"></p>
+    <p id="recommendedCourse"></p>
+    <canvas id="quizPerformanceChart"></canvas>
+    <button onclick="restartCourse()">Restart Course</button>
+  </div>
+
+  <script src="C:\Users\haris\OneDrive\Desktop\website\script.js"></script>
+</body>
+</html>
